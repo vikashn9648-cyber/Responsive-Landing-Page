@@ -1,0 +1,112 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* Navbar */
+#navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    background:transparent;
+    transition:0.4s ease;
+    z-index:1000;
+}
+
+/* Scroll Effect */
+#navbar.scrolled{
+    background:linear-gradient(90deg,#0072ff,#00c6ff);
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    padding:15px 50px;
+}
+
+/* Logo */
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+/* Menu */
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    font-weight:500;
+    transition:0.3s;
+    padding:8px 15px;
+    border-radius:25px;
+}
+
+/* Hover Effect */
+.nav-links a:hover{
+    background:white;
+    color:#0072ff;
+    transform:translateY(-3px);
+}
+
+/* Sections */
+.section{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    color:white;
+}
+
+#home{
+    background:linear-gradient(135deg,#1d2671,#c33764);
+}
+
+#about{
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+
+#services{
+    background:linear-gradient(135deg,#fc466b,#3f5efb);
+}
+
+#portfolio{
+    background:linear-gradient(135deg,#ff9966,#ff5e62);
+}
+
+#contact{
+    background:linear-gradient(135deg,#00c9ff,#92fe9d);
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    #navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .section h1{
+        font-size:30px;
+    }
+}
